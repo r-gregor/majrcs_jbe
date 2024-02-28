@@ -163,10 +163,14 @@ alias r='/usr/bin/ranger'
 # 20220412
 export KDBWORKTREE="${HOME}/Dropbox_muadib/ODPRTO"
 export KDBGITDIR="${HOME}/majstaf/d_kdb/knowledgedb.git"
-export DMTSGITDIR="${HOME}/majstaf/d_metsys_git/d_metsys"
-export DMTSWORKDIR="${HOME}/majstaf/d_metsys_git/d_metsys_source"
 alias dkdb="/usr/bin/git --git-dir=${KDBGITDIR} --work-tree=${KDBWORKTREE}"
 alias dmts="/usr/bin/git --git-dir=${DMTSGITDIR} --work-tree=${DMTSWORKDIR}"
+
+# 20240228
+export JBEVOLGITDIR="${HOME}/majstaf/jbegit/vlpprs_jbe"
+export JBEVOLWORKTREE="${HOME}/majstaf/majvolpejpers"
+alias jvol="/usr/bin/git --git-dir=${JBEVOLGITDIR} --work-tree=${JBEVOLWORKTREE}"
+
 
 alias sdu='sudo du -sh --total * | sort -hr | head'
 
@@ -191,3 +195,5 @@ alias vimb="vim -u $HOME/.dotvimrc_monochrome"
 alias vimr='vim -M'
 alias vimm='vim -M'
 
+# 20240228 ???
+#
