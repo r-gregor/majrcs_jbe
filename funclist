@@ -293,7 +293,11 @@ function cless() {
 }
 
 function BrthReminder_c() {
-	/home/rgregor/majstaf/majbin/BrthReminder_c/BrthReminder "$@"
+	/home/rgregor/majstaf/majbin/BrthReminder_c/BrthReminder_c
+}
+
+function BrthReminder_c_color() {
+	/home/rgregor/majstaf/majbin/BrthReminder_c/BrthReminder_c_color
 }
 
 function ff() {
