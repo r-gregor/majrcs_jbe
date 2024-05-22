@@ -195,5 +195,9 @@ alias vimb="vim -u $HOME/.dotvimrc_monochrome"
 alias vimr='vim -M'
 alias vimm='vim -M'
 
-# 20240228 ???
-#
+# 20240522
+alias bb='~/majstaf/majbin/BrthReminder_c/BrthReminder_c'
+alias bbc='~/majstaf/majbin/BrthReminder_c/BrthReminder_c_color'
+
+# 
+
