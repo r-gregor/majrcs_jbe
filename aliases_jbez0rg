@@ -200,4 +200,8 @@ alias vimm='vim -M'
 # alias bbc='~/majstaf/majbin/BrthReminder_c/BrthReminder_c_color'
 
 # 
+# 20240821 -- pipe list of files to 'uim/uimp' to open them
+#             writable/readonly as separate tabs in vim
+alias uim=' xargs -ro vim -p'
+alias uimp=' xargs -ro vim -Mp'
 
