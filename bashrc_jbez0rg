@@ -118,3 +118,8 @@ export CDPATH=".:$HOME/majstaf:$HOME/majstaf/coding2/testing:$HOME/Dropbox/ODPRT
 # 20231005
 source ${HOME}/.SCRTS
 
+# 20240828
+export PATH=${PATH}:${HOME}/majstaf/majprogs/go/bin
+export GOROOT=${HOME}/majstaf/majprogs/go
+
+
