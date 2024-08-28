@@ -205,3 +205,7 @@ alias vimm='vim -M'
 alias uim=' xargs -ro vim -p'
 alias uimp=' xargs -ro vim -Mp'
 
+# 20240824
+alias fzvm='fzf | xargs -ro vim'
+alias fzvmp='fzf -m | xargs -ro vim -p'
+
