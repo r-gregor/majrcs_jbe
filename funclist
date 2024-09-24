@@ -312,3 +312,11 @@ function ff() {
 	/usr/bin/snap run firefox
 }
 
+function logout() {
+	sudo loginctl terminate-user ${USER}
+}
+
+function logout() {
+	loginctl terminate-user ${USER}
+}
+
