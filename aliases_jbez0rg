@@ -210,3 +210,7 @@ alias uimp=' xargs -ro vim -Mp'
 alias fzvm='fzf | xargs -ro vim'
 alias fzvmp='fzf -m | xargs -ro vim -p'
 
+# 20241015
+# alias sbrn='source ~/.bashrc_nerd'
+# alias sbrb='source ~/.bashrc_base'
+

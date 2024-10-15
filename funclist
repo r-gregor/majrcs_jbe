@@ -320,3 +320,11 @@ function logout() {
 	loginctl terminate-user ${USER}
 }
 
+# 20241015
+function sbrn() {
+	alacritty -e bash --init-file ~/.bashrc_nerd
+}
+
+function sbrb() {
+	alacritty -e bash --init-file ~/.bashrc_base
+}
