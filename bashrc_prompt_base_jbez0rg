@@ -1,0 +1,23 @@
+
+### changed 20160510
+# export PS1='$(printf "\n%s\n")\$> \u@\h [${PWD}] \n\$> '
+# export PS1='$(printf "\n%s\n")\$> \[\033[01;32m\]\u@\h \[\033[01;34m\][${PWD}]\[\033[00m\] \n\$> '
+# export PS1='$(printf "%s")\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\[\033[00m\]\n\$> '
+
+# new PS1 with git branch notation
+parse_git_branch() {
+	if [ -d ./.git ] || [ -d ./hooks ]; then 
+		printf '\e[01;38;5;141m%s\e[01;33;1;75m' "git:"
+		git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
+	fi
+}
+
+# export PS1='$(printf "%s")\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\n$(parse_git_branch) \[\033[00m\]\$> '
+
+# from EN
+# export PS1='$(printf "%s")\[\e[01;38;5;75m\]\u\[\e[01;38;5;36m\]@\[\e[01;38;5;75m\]cygwin-en \[\e[01;38;5;36m\]\w\n$(parse_git_branch) \[\e[0m\]\$> '
+
+# export PS1='$(printf "%s")\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\n$(parse_git_branch) \[\033[00m\]\$> '
+# 20240214
+# # check: symbols and prompts_20240214.txt in ~/majstaf_en/metsys_en/
+export export PS1=$'\n\[\e[01;38;5;75m\][\h] \w\n$(parse_git_branch)\[\e[1;31m\]\u21AA \[\e[0m\] '

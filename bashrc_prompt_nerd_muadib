@@ -1,0 +1,71 @@
+# PROMPT- PS1 setup
+export PROMPT_DIRTRIM=0
+
+# new PS1 with git branch notation
+#	parse_git_branch() {
+#		if [ -d ./.git ] || [ -d ./hooks ]; then
+#			printf '\e[01;38;5;141m%s\e[01;33;1;75m' "git:"
+#			git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+#		fi
+#	}
+#	
+
+# 20241014: not used --> kept as a reference
+#	parse_git_branch() {
+#	#	if [ -d ./.git ] || [ -d ./hooks ]; then 
+#	#		# printf '\e[01;38;5;141m%s\e[01;33;1;75m' "git:"
+#	#		echo -en "\e[01;38;5;141mgit:\e[01;33;1;75m"
+#	#		git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /'
+#	#	fi
+#	#}
+#	export export PS1=$'\n\[\e[01;38;5;75m\][\h] \w\n$(parse_git_branch)\[\e[1;31m\]\u21AA \[\e[0m\] '
+
+
+# 20241014
+date_stamp() {
+echo -e "\e[38;5;244m[$(date +"%Y-%m-%d")] [$(date +%T)]\e[0m"
+}
+
+# 20240214
+# check: symbols and prompts_20240214.txt in ~/majstaf_en/metsys_en/
+
+
+# 20241014
+prompt_left() {
+	# simple
+	# echo -e "\[\e[01;38;5;75m\][\h] \w"
+
+	# NERD symbols
+	off='\e[m'
+	orange_bg='\e[01;38;5;215m'
+	orange_inv='\e[07;38;5;215m'
+	orange_blue='\e[07;48;5;215;38;5;111m'
+	blue_inv='\e[07;48;5;0;38;5;111m'
+	blue_bg='\e[01;38;5;111m'
+	lila_bg='\e[01;38;5;141m'
+	lila_inv='\e[07;38;5;141;48;5;0m'
+	blue_lila='\e[01;38;5;111;48;5;141m'
+
+	if [ -d ./.git ] || [ -d ./hooks ]; then
+		info=" git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /')"
+		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv}\w${off}${blue_lila}${off}${lila_inv}${info}${off}${lila_bg}${off}"
+	else
+		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} \w${off}${blue_lila}${off}${lila_bg}${off}"
+	fi
+}
+
+# 20241014
+prompt_next() {
+	# NERD symbols
+	# echo -e  "\[\e[1;31m\]\u21AA \[\e[0m\]"
+	echo -e  "\[\e[1;31m\] \[\e[0m\]"
+}
+
+# 20241014
+prompt() {
+	PS1=$(printf "\n%*s\r%s\n%s " "$(($(tput cols) + 14))" "$(date_stamp)" "$(prompt_left)" "$(prompt_next)")
+}
+
+# 20241014
+PROMPT_COMMAND=prompt
+
