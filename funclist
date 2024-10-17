@@ -322,9 +322,9 @@ function logout() {
 
 # 20241015
 function sbrn() {
-	alacritty -e bash --init-file ~/.bashrc_nerd
+	nohup alacritty -e bash --init-file ~/.bashrc_nerd >/dev/null 2>&1 &
 }
 
 function sbrb() {
-	alacritty -e bash --init-file ~/.bashrc_base
+	nohup alacritty -e bash --init-file ~/.bashrc_base >/dev/null 2>&1 &
 }
