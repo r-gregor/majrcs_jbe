@@ -20,15 +20,22 @@ prompt_left() {
 	orange_bg='\e[01;38;5;215m'
 	orange_inv='\e[07;38;5;215m'
 	orange_blue='\e[07;48;5;215;38;5;111m'
+
 	blue_inv='\e[07;48;5;0;38;5;111m'
 	blue_bg='\e[01;38;5;111m'
+	blue_lila='\e[01;38;5;111;48;5;141m'
+
 	lila_bg='\e[01;38;5;141m'
 	lila_inv='\e[07;38;5;141;48;5;0m'
-	blue_lila='\e[01;38;5;111;48;5;141m'
+	
+	yllw_bg='\e[01;38;5;226m'
+	yllw_inv='\e[07;38;5;226m'
+	blue_yllw='\e[01;38;5;111;48;5;226m'
 
 	if [ -d ./.git ] || [ -d ./hooks ]; then
 		info=" git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /')"
-		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv}\w${off}${blue_lila}${off}${lila_inv}${info}${off}${lila_bg}${off}"
+		#echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv}\w${off}${blue_lila}${off}${lila_inv}${info}${off}${lila_bg}${off}"
+		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv}\w${off}${blue_yllw}${off}${yllw_inv}${info}${off}${yllw_bg}${off}"
 	else
 		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} \w${off}${blue_lila}${off}${lila_bg}${off}"
 	fi
