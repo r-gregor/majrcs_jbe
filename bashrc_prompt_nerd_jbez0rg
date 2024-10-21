@@ -77,3 +77,4 @@ prompt() {
 # 20241014
 PROMPT_COMMAND=prompt
 
+# test
