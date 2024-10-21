@@ -28,9 +28,9 @@ prompt_left() {
 	lila_bg='\e[01;38;5;141m'
 	lila_inv='\e[07;38;5;141;48;5;0m'
 	
-	yllw_bg='\e[01;38;5;226m'
-	yllw_inv='\e[07;38;5;226m'
-	blue_yllw='\e[01;38;5;111;48;5;226m'
+	yllw_bg='\e[01;38;5;228m'
+	yllw_inv='\e[07;38;5;228m'
+	blue_yllw='\e[01;38;5;111;48;5;228m'
 
 
 	red_bg='\e[01;91m'
