@@ -328,3 +328,8 @@ function sbrn() {
 function sbrb() {
 	nohup alacritty -e bash --init-file ~/.bashrc_base >/dev/null 2>&1 &
 }
+
+function gst() {
+	/usr/bin/git status
+}
+
