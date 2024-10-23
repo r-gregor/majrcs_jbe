@@ -1,19 +1,15 @@
+######################
 # PROMPT- PS1 setup
-export PROMPT_DIRTRIM=0
+######################
+export PROMPT_DIRTRIM=3
 
 # 20241014
 date_stamp() {
 echo -e "\e[38;5;244m[$(date +"%Y-%m-%d")] [$(date +%T)]\e[0m"
 }
 
-# 20240214
-# check: symbols and prompts_20240214.txt in ~/majstaf_en/metsys_en/
-
-
 # 20241014
 prompt_left() {
-	# simple
-	# echo -e "\[\e[01;38;5;75m\][\h] \w"
 
 	# NERD symbols
 	off='\e[m'
@@ -36,28 +32,11 @@ prompt_left() {
 	red_inv='\e[07;91m'
 	blue_red='\e[00;38;5;111;101m'
 
-	green_bg='\e[00;48;5;42m'
-	green='\e[00;38;5;42m'
-	green_inv='\e[07;38;5;42m'
-	blue_green='\e[00;38;5;111;48;5;42m'
-
-#	if [ -d ./.git ] || [ -d ./hooks ]; then
-#		git_info=" git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /')"
-#		/usr/bin/git status -b | grep -i "new file\|modified\|untracked\|deleted" &>/dev/null
-#		if [ $? -eq 1 ]; then
-#			echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} \w ${off}${blue_yllw}${off}${yllw_inv}${git_info} ${off}${yllw_bg}${off}"
-#		else
-#			/usr/bin/git status -b | grep -i "ahead" &>/dev/null
-#			if [ $? -eq 1 ]; then
-#				echo -e "${orange_bg}${orange_inv}\u@\h${orange_blue}${blue_inv} \w ${off}${blue_red}${off}${red_inv}${git_info} ${off}${red_bg}${off}"
-#			else
-#				echo -e "${orange_bg}${orange_inv}\u@\h${orange_blue}${blue_inv} \w ${off}${blue_green}${off}${green_inv}${git_info} ${off}${green_bg}${off}"
-#			fi
-#		fi
-#	else
-#		# echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} $(pwd) ${off}${blue_lila}${off}${lila_bg}${off}"
-#		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} $(pwd) ${off}${blue_bg}${off}"
-#	fi
+	green_bg='\e[00;48;5;79m'
+	green='\e[00;38;5;79m'
+	green_inv='\e[07;38;5;79m'
+	green_white='\e[00;38;5;0;48;5;79m'
+	blue_green='\e[00;38;5;111;48;5;79m'
 
 	if [ -d ./.git ] || [ -d ./hooks ]; then
 		git_info=" git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /')"
@@ -67,13 +46,13 @@ prompt_left() {
 		else
 			/usr/bin/git status -b | grep -i "ahead\|pull" &>/dev/null
 			if [ $? -eq 0 ]; then
-				echo -e "${orange_bg}${orange_inv}\u@\h${orange_blue}${blue_inv} \w ${off}${blue_green}${off}${green_inv}${git_info}${off}${green}${off}"
+				echo -e "${orange_bg}${orange_inv}\u@\h${orange_blue}${blue_inv} \w ${off}${blue_green}${off}${green_white}${git_info}${off}${green}${off}"
 			else
 				echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} \w ${off}${blue_yllw}${off}${yllw_inv}${git_info}${off}${yllw_bg}${off}"
 			fi
 		fi
 	else
-		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} $(pwd) ${off}${blue_bg}${off}"
+		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} \w ${off}${blue_bg}${off}"
 	fi
 }
 
