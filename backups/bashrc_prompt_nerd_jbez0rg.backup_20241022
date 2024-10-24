@@ -1,0 +1,99 @@
+# PROMPT- PS1 setup
+export PROMPT_DIRTRIM=0
+
+# 20241014
+date_stamp() {
+echo -e "\e[38;5;244m[$(date +"%Y-%m-%d")] [$(date +%T)]\e[0m"
+}
+
+# 20240214
+# check: symbols and prompts_20240214.txt in ~/majstaf_en/metsys_en/
+
+
+# 20241014
+prompt_left() {
+	# simple
+	# echo -e "\[\e[01;38;5;75m\][\h] \w"
+
+	# NERD symbols
+	off='\e[m'
+	orange_bg='\e[00;38;5;215m'
+	orange_inv='\e[07;38;5;215m'
+	orange_blue='\e[07;48;5;215;38;5;111m'
+
+	blue_inv='\e[07;48;5;0;38;5;111m'
+	blue_bg='\e[00;38;5;111m'
+	blue_lila='\e[00;38;5;111;48;5;141m'
+
+	lila_bg='\e[00;38;5;141m'
+	lila_inv='\e[07;38;5;141;48;5;0m'
+	
+	yllw_bg='\e[00;38;5;228m'
+	yllw_inv='\e[07;38;5;228m'
+	blue_yllw='\e[00;38;5;111;48;5;228m'
+
+	red_bg='\e[00;91m'
+	red_inv='\e[07;91m'
+	blue_red='\e[00;38;5;111;101m'
+
+	green_bg='\e[00;48;5;42m'
+	green='\e[00;38;5;42m'
+	green_inv='\e[07;38;5;42m'
+	blue_green='\e[00;38;5;111;48;5;42m'
+
+
+
+
+# 	if [ -d ./.git ] || [ -d ./hooks ]; then
+# 		git_info=" git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /')"
+# 		/usr/bin/git status | grep -i "new file\|modified\|untracked\|deleted" &>/dev/null
+# 		if [ $? -eq 1 ]; then
+# 			echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} \w ${off}${blue_yllw}${off}${yllw_inv}${git_info} ${off}${yllw_bg}${off}"
+# 		else
+# 			/usr/bin/git status | grep -i "ahead" &>/dev/null
+# 			if [ $? -eq 1 ]; then
+# 				echo -e "${orange_bg}${orange_inv}\u@\h${orange_blue}${blue_inv} \w ${off}${blue_red}${off}${red_inv}${git_info} ${off}${red_bg}${off}"
+# 			else
+# 				echo -e "${orange_bg}${orange_inv}\u@\h${orange_blue}${blue_inv} \w ${off}${blue_green}${off}${green_inv}${git_info} ${off}${green_bg}${off}"
+# 			fi
+# 		fi
+# 	else
+# 		# echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} $(pwd) ${off}${blue_lila}${off}${lila_bg}${off}"
+# 		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} $(pwd) ${off}${blue_bg}${off}"
+# 	fi
+
+	if [ -d ./.git ] || [ -d ./hooks ]; then
+		git_info=" git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /')"
+		/usr/bin/git status -b | grep -i "new file\|modified\|untracked\|deleted" &>/dev/null
+		if [ $? -eq 0 ]; then
+			echo -e "${orange_bg}${orange_inv}\u@\h${orange_blue}${blue_inv} \w ${off}${blue_red}${off}${red_inv}${git_info}${off}${red_bg}${off}"
+		else
+			/usr/bin/git status -b | grep -i "ahead\|pull" &>/dev/null
+			if [ $? -eq 0 ]; then
+				echo -e "${orange_bg}${orange_inv}\u@\h${orange_blue}${blue_inv} \w ${off}${blue_green}${off}${green_inv}${git_info}${off}${green}${off}"
+			else
+				echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} \w ${off}${blue_yllw}${off}${yllw_inv}${git_info}${off}${yllw_bg}${off}"
+			fi
+		fi
+	else
+		echo -e "${orange_bg}${orange_inv}\u@\h ${orange_blue}${blue_inv} $(pwd) ${off}${blue_bg}${off}"
+	fi
+
+}
+
+# 20241014
+prompt_next() {
+	# NERD symbols
+	# echo -e  "\[\e[1;31m\]\u21AA \[\e[0m\]"
+	echo -e  "\[\e[1;31m\] \[\e[0m\]"
+}
+
+# 20241014
+prompt() {
+	PS1=$(printf "\n%*s\r%s\n%s " "$(($(tput cols) + 14))" "$(date_stamp)" "$(prompt_left)" "$(prompt_next)")
+}
+
+# 20241014
+PROMPT_COMMAND=prompt
+
+# test
