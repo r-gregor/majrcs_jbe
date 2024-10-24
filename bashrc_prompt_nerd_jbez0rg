@@ -15,28 +15,28 @@ prompt_left() {
 	off='\e[m'
 	orange_bg='\e[00;38;5;215m'
 	orange_inv='\e[07;38;5;215m'
-	orange_blue='\e[07;48;5;215;38;5;111m'
+	orange_blue='\e[07;48;5;215;38;5;33m'
 
-	blue_inv='\e[07;48;5;0;38;5;111m'
-	blue_bg='\e[00;38;5;111m'
-	blue_lila='\e[00;38;5;111;48;5;141m'
+	blue_inv='\e[07;48;5;0;38;5;33m'
+	blue_bg='\e[00;38;5;33m'
+	blue_lila='\e[00;38;5;33;48;5;141m'
 
 	lila_bg='\e[00;38;5;141m'
 	lila_inv='\e[07;38;5;141;48;5;0m'
 	
 	yllw_bg='\e[00;38;5;228m'
 	yllw_inv='\e[07;38;5;228m'
-	blue_yllw='\e[00;38;5;111;48;5;228m'
+	blue_yllw='\e[00;38;5;33;48;5;228m'
 
 	red_bg='\e[00;91m'
 	red_inv='\e[07;91m'
-	blue_red='\e[00;38;5;111;101m'
+	blue_red='\e[00;38;5;33;101m'
 
-	green_bg='\e[00;48;5;79m'
-	green='\e[00;38;5;79m'
-	green_inv='\e[07;38;5;79m'
-	green_white='\e[00;38;5;0;48;5;79m'
-	blue_green='\e[00;38;5;111;48;5;79m'
+	green_bg='\e[00;48;5;29m'
+	green='\e[00;38;5;29m'
+	green_inv='\e[07;38;5;29m'
+	green_white='\e[00;38;5;0;48;5;29m'
+	blue_green='\e[00;38;5;33;48;5;29m'
 
 	if [ -d ./.git ] || [ -d ./hooks ]; then
 		git_info=" git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /')"
