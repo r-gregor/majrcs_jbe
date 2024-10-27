@@ -333,3 +333,14 @@ function gst() {
 	/usr/bin/git status
 }
 
+function switch_prompt() {
+			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
+			quit=$(echo "quit")
+			choice=$(echo -e "${prompts}\n${quit}" | fzf --reverse)
+			if [ "$choice" == "quit" ]; then
+				:
+			else
+				source ~/majstaf/majrcs/${choice}
+			fi
+}
+
