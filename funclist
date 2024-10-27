@@ -344,3 +344,33 @@ function switch_prompt() {
 			fi
 }
 
+
+function switch_prompt_dmn() {
+			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
+			quit=$(echo "quit")
+			choice=$(echo -e "${prompts}\n${quit}" | dmenu -l 5 -p "choose prompt:")
+			if [ "$choice" == "quit" ]; then
+				:
+			else
+				source ~/majstaf/majrcs/${choice}
+			fi
+}
+
+function switch_prompt_rofi() {
+			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
+			quit=$(echo "quit")
+			choice=$(echo -e "${prompts}\n${quit}" | rofi -dmenu -no-fixed-num-lines)
+			if [ "$choice" == "quit" ]; then
+				:
+			else
+				source ~/majstaf/majrcs/${choice}
+			fi
+}
+
+function swpd() {
+	switch_prompt_dmn
+}
+
+function swpr() {
+	switch_prompt_rofi
+}
