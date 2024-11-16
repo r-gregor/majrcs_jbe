@@ -108,15 +108,15 @@ zdaj () {
 
 # --------------------------------------------------------
 
-function dejt() {
-dejt=$(date +%Y%m%d%H%M)
-echo $dejt
+dejt() {
+	dejt=$(date +%Y%m%d%H%M)
+	echo $dejt
 }
 
 # --------------------------------------------------------
 ### dropvox functions 20160514
 
-function db0() {
+db0() {
 	dropbox stop
 }
 
@@ -131,11 +131,11 @@ function dbs() {
 	watch -n1 'dropbox status'
 }
 
-function dbs1() {
+dbs1() {
 	dropbox status
 }
 
-function dbs2() {
+dbs2() {
   clear
   while true; do
     echo -en "$(dropbox status) \r"
@@ -150,7 +150,7 @@ function dbs2() {
 ### session divided into multiple windows ...
 
 
-function skrn() {
+skrn() {
 
 gr_FJL="~/.screen-lyt"
 if [ $1 -eq 0 ] || [ $1 -eq 1 ] || [ $1 -eq 2 ] || [ $1 -eq 3 ]; then
@@ -174,7 +174,7 @@ fi
 
 
 # function pim_on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Movies
-function pim_on() {
+pim_on() {
 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/Movies /home/rgregor/KRZ_Movies
 	if [ $? -eq 0 ]; then
 		echo "KODI sucessfully conected to /home/rgregor/KRZ_Movies"
@@ -185,7 +185,7 @@ function pim_on() {
 
 
 # function pim_of() -- kill sshfs /home/rgregor/KRZ_Movies
-function pim_of() {
+pim_of() {
 	fusermount -u /home/rgregor/KRZ_Movies
 	echo "/home/rgregor/KRZ_Movies disconected."
 }
@@ -196,7 +196,7 @@ function pim_of() {
 #
 
 # function pit_on() -- sshfs KODI:TV Shows to /home/rgregor/KRZ_TV_shows
-function pit_on() {
+pit_on() {
 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/TV\ Shows /home/rgregor/KRZ_TV_shows
 	if [ $? -eq 0 ]; then
 		echo "KODI sucessfully conected to /home/rgregor/KRZ_TV_shows"
@@ -207,7 +207,7 @@ function pit_on() {
 
 
 # function pit_of() -- kill sshfs /home/rgregor/KRZ_TV_shows
-function pit_of() {
+pit_of() {
 	fusermount -u /home/rgregor/KRZ_TV_shows
 	echo "/home/rgregor/KRZ_TV_shows disconected."
 }
@@ -215,7 +215,7 @@ function pit_of() {
 
 ################################################################################
 # function piv_on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Videos
-function piv_on() {
+piv_on() {
 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/Videos /home/rgregor/KRZ_Videos
 	if [ $? -eq 0 ]; then
 		echo "KODI sucessfully conected to /home/rgregor/KRZ_Videos"
@@ -226,7 +226,7 @@ function piv_on() {
 
 
 # function piv_of() -- kill sshfs /home/rgregor/KRZ_Videos
-function piv_of() {
+piv_of() {
 	fusermount -u /home/rgregor/KRZ_Videos
 	echo "/home/rgregor/KRZ_Videos disconected."
 }
@@ -235,17 +235,17 @@ function piv_of() {
 ### --------------------------------------------------------------------
 ### 20170119
 #
-function cnks() {
+cnks() {
 conky &
 # exit 0
 clear
 }
 
-function cnkk() {
+cnkk() {
 sudo pkill conky
 }
 
-function cml() {
+cml() {
 	clear
 	cat $HOME/majstaf/forallusers/commands-list.txt
 }
@@ -253,7 +253,7 @@ function cml() {
 
 ### --------------------------------------------------------------------
 ### 20171101
-function wtmpp () {
+wtmpp () {
     watch -d -n1 "du $TMPP"
 }
 
@@ -261,30 +261,30 @@ function wtmpp () {
 ### --------------------------------------------------------------------
 ### 20180228
 
-function tmxs () {
+tmxs () {
 	# tmux -f ~/.mytmuxconf_V3 attach
 	tmux -f ~/.mytmuxconf_V4 attach
 }
 
-function tmxdb () {
+tmxdb () {
 	tmux -f ~/.tmxdb_1 attach
 }
 
 ### 20180302
-function 256_colors () {
+256_colors () {
 
     for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done
 }
 
 # 20210209 display KEYBOARD SHORTCUTS
 #
-function keybskts () {
+keybskts () {
 	clear
 	cat /home/rgregor/majstaf/metsys/KEYBOARD-SHORCUTS_20210209.TXT
 }
 
 # 20221213
-function cless() {
+cless() {
 	if [ $# != 1 ]; then
 		return
 	fi
@@ -308,32 +308,32 @@ function cless() {
 ### 	/home/rgregor/majstaf/majbin/BrthReminder_c/BrthReminder_c_color
 ### }
 
-function ff() {
+ff() {
 	/usr/bin/snap run firefox
 }
 
-function logout() {
+logout() {
 	sudo loginctl terminate-user ${USER}
 }
 
-function logout() {
-	loginctl terminate-user ${USER}
-}
+# logout() {
+# 	loginctl terminate-user ${USER}
+# }
 
 # 20241015
-function sbrn() {
+sbrn() {
 	nohup alacritty -e bash --init-file ~/.bashrc_nerd >/dev/null 2>&1 &
 }
 
-function sbrb() {
+sbrb() {
 	nohup alacritty -e bash --init-file ~/.bashrc_base >/dev/null 2>&1 &
 }
 
-function gst() {
+gst() {
 	/usr/bin/git status
 }
 
-function switch_prompt() {
+prompt_switch() {
 			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | fzf --reverse)
@@ -345,7 +345,7 @@ function switch_prompt() {
 }
 
 
-function switch_prompt_dmn() {
+prompt_switch_dmn() {
 			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | dmenu -l 5 -p "choose prompt:")
@@ -356,7 +356,7 @@ function switch_prompt_dmn() {
 			fi
 }
 
-function switch_prompt_rofi() {
+prompt_switch_rofi() {
 			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | rofi -dmenu -no-fixed-num-lines)
@@ -367,10 +367,19 @@ function switch_prompt_rofi() {
 			fi
 }
 
-function swpd() {
+swpd() {
 	switch_prompt_dmn
 }
 
-function swpr() {
+swpr() {
 	switch_prompt_rofi
 }
+
+BrthReminder_c() {
+	~/.local/bin/BrthReminder_c
+}
+
+BrthReminder_c_color() {
+	~/.local/bin/BrthReminder_c_color
+}
+
