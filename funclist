@@ -52,17 +52,6 @@ lsl ()	{
 	done
 }
 
-# --------------------------------------------------------
-
-bbb () {
-clear
-source $HOME/.bashrc
-echo "*************************"
-echo "* Use the source Luke!! *"
-echo "*************************"
-echo "The \"$HOME/.bashrc\" has just been sourced!!"
-echo
-}
 
 # --------------------------------------------------------
 
