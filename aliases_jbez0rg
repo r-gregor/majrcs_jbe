@@ -51,8 +51,8 @@ alias ydlF='${ydl_cmd} -F '
 alias ydl="${ydl_cmd} -o '%(title)s_%(upload_date)s.%(ext)s'"
 
 ### added 20130926 ----------------------------------------------
-alias fm='thunar'
-alias pm='pcmanfm'
+alias fm='thunar . &'
+alias pm='pcmanfm . &'
 # alias opn='pcmanfm'
 alias opn='mousepad & 2>/dev/null'
 
