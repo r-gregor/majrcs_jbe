@@ -190,6 +190,7 @@ alias ff='/usr/bin/firefox'
 alias cargon='cargo new --vcs=none '
 
 # 20240206
+alias v="vim"
 alias vimb="vim -u $HOME/.dotvimrc_monochrome"
 
 # 20240212
