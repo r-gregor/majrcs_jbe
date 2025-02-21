@@ -122,4 +122,23 @@ source ${HOME}/.SCRTS
 export PATH=${PATH}:${HOME}/majstaf/majprogs/go/bin
 export GOROOT=${HOME}/majstaf/majprogs/go
 
+# 20250221 new env variables
+export MJSTF="/home/rgregor/majstaf"
+export JGT="${MJSTF}/jbegit"
+#
+export MJBN="${MJSTF}/majbin"
+export MJRCS="${MJSTF}/majrcs"
+export MJTS="${MJSTF}/metsys"
+export SZNM="${MJSTF}/seznami"
+export DANES="${MJSTF}/_NERAZPOREJENO/__DANES__"
+#
+export J_MJBN="${JGT}/majbin_jbe"
+export J_MJRCS="${JGT}/majrcs_jbe"
+export J_MJTS="${JGT}/metsys_jbe"
+export J_DTF="${JGT}/dotfiles_jbe"
+export J_SZNM="${JGT}/seznami_jbe"
+export J_VLPP="${JGT}/vlpprs_jbe"
+#
+export KNOWLEDGEDB="${JGT}/knowledgedb"
+export PRNS="${JGT}/prenos"
 
