@@ -132,13 +132,14 @@ export MJTS="${MJSTF}/metsys"
 export SZNM="${MJSTF}/seznami"
 export DANES="${MJSTF}/_NERAZPOREJENO/__DANES__"
 #
-export J_MJBN="${JGT}/majbin_jbe"
-export J_MJRCS="${JGT}/majrcs_jbe"
-export J_MJTS="${JGT}/metsys_jbe"
-export J_DTF="${JGT}/dotfiles_jbe"
-export J_SZNM="${JGT}/seznami_jbe"
-export J_VLPP="${JGT}/vlpprs_jbe"
+export JMBN="${JGT}/majbin_jbe"
+export JMRC="${JGT}/majrcs_jbe"
+export JMTS="${JGT}/metsys_jbe"
+export JDTF="${JGT}/dotfiles_jbe"
+export JSZNM="${JGT}/seznami_jbe"
+export JVLPP="${JGT}/vlpprs_jbe"
+export JPRNS="${JGT}/prenos"
 #
 export KNOWLEDGEDB="${JGT}/knowledgedb"
-export PRNS="${JGT}/prenos"
+#
 
