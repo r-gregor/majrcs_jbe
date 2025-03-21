@@ -372,3 +372,8 @@ BrthReminder_c_color() {
 	~/.local/bin/BrthReminder_c_color
 }
 
+
+ncd() {
+		 cd "$(find "$@" -type d \( -name ".git" -o -name ".cache" \) -prune -o -name "*" 2>/dev/null |fzf -e --reverse)"
+}
+
