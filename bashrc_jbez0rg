@@ -113,7 +113,7 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 # Append this line to ~/.bashrc to enable fuzzy auto-completion for Bash:
 # ignore for fzf --version >= 0.29
 # source /usr/share/doc/fzf/examples/completion.bash
-export CDPATH=".:$HOME/majstaf:$HOME/majstaf/coding2/testing:$HOME/Dropbox/ODPRTO"
+# export CDPATH=".:$HOME/majstaf:$HOME/majstaf/coding2/testing:$HOME/Dropbox/ODPRTO"
 
 # 20231005
 source ${HOME}/.SCRTS
@@ -125,11 +125,6 @@ export GOROOT=${HOME}/majstaf/majprogs/go
 # 20250221 new env variables
 export MJSTF="/home/rgregor/majstaf"
 export JGT="${MJSTF}/jbegit"
-#
-export MJBN="${MJSTF}/majbin"
-export MJRCS="${MJSTF}/majrcs"
-export MJTS="${MJSTF}/metsys"
-export SZNM="${MJSTF}/seznami"
 export DANES="${MJSTF}/_NERAZPOREJENO/__DANES__"
 #
 export JMBN="${JGT}/majbin_jbe"
@@ -142,4 +137,22 @@ export JPRNS="${JGT}/prenos"
 #
 export KNOWLEDGEDB="${JGT}/knowledgedb"
 #
+# 20250313
+export MTST="${MJSTF}/coding2/testing"
+export CTST="${MTST}/c_testing"
+export JTST="${MTST}/java_testing"
+export GTST="${MTST}/go_testing"
+export PTST="${MTST}/python_testing"
+export RTST="${MTST}/rust_testing"
+export NTST="${MTST}/ncurses_testing"
+export ZTST="${MTST}/zig_testing"
+
+export MJMDJ="${MJSTF}/majmedia"
+export SVM="${MJMDJ}/Seivom"
+export MVS="${MJMDJ}/Movies"
+
+export MBN="${MJSTF}/majbin"
+export MRCS="${MJSTF}/majrcs"
+export SZNM="${MJSTF}/seznami"
+export MTSS="${MJSTF}metsys"
 

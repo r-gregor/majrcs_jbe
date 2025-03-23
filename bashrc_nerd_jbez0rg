@@ -17,7 +17,8 @@ export TERM=xterm-256color
 # export PS1='$(printf "\n%s\n")\$> \[\033[01;32m\]\u@\h \[\033[01;34m\][${PWD}]\[\033[00m\] \n\$> '
 # export PS1='$(printf "%s")\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\[\033[00m\]\n\$> '
 
-source /home/rgregor/majstaf/majrcs/bashrc_prompt_nerd_jbez0rg
+# source /home/rgregor/majstaf/majrcs/bashrc_prompt_nerd_jbez0rg
+source /home/rgregor/majstaf/majrcs/bashrc_prompt_bare_jbez0rg
 
 ### TERMINAL & DISPLAY SETTINGS 20160514
 ### terminal font settings: Ubuntu mono, 11;
@@ -78,7 +79,7 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 # Append this line to ~/.bashrc to enable fuzzy auto-completion for Bash:
 # ignore for fzf --version >= 0.29
 # source /usr/share/doc/fzf/examples/completion.bash
-export CDPATH=".:$HOME/majstaf:$HOME/majstaf/coding2/testing:$HOME/Dropbox/ODPRTO"
+# export CDPATH=".:$HOME/majstaf:$HOME/majstaf/coding2/testing:$HOME/Dropbox/ODPRTO"
 
 # 20231005
 source ${HOME}/.SCRTS

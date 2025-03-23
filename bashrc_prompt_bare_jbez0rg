@@ -27,17 +27,17 @@ prompt_left() {
 		git_info="git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$//')"
 		/usr/bin/git status -b | grep -i "new file\|modified\|untracked\|deleted" &>/dev/null
 		if [ $? -eq 0 ]; then
-			echo -e "[\u@\h] \w -- [${git_info} | ADD/COMMIT]"
+			echo -e "-- [\u@\h] \w -- [${git_info} | ADD/COMMIT]"
 		else
 			/usr/bin/git status -b | grep -i "ahead\|pull" &>/dev/null
 			if [ $? -eq 0 ]; then
-				echo -e "[\u@\h] \w -- [${git_info} | PUSH!]"
+				echo -e "-- [\u@\h] \w -- [${git_info} | PUSH!]"
 			else
-				echo -e "[\u@\h] \w -- [${git_info}]"
+				echo -e "-- [\u@\h] \w -- [${git_info}]"
 			fi
 		fi
 	else
-		echo -e "[\u@\h] \w"
+		echo -e "-- [\u@\h] \w"
 	fi
 }
 
@@ -48,7 +48,8 @@ prompt_next() {
 
 # 20241014
 prompt() {
-	PS1=$(printf "\n%*s\r%s\n%s " "$(($(tput cols) + 14))" "$(date_stamp)" "$(prompt_left)" "$(prompt_next)")
+	# PS1=$(printf "\n%*s\r%s\n%s " "$(($(tput cols) + 14))" "$(date_stamp)" "$(prompt_left)" "$(prompt_next)")
+	PS1=$(printf "%*s\r%s\n%s " "$(($(tput cols) + 14))" "$(date_stamp)" "$(prompt_left)" "$(prompt_next)")
 }
 
 # 20241014
