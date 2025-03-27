@@ -5,7 +5,7 @@
 # 0 --> display full path
 # 3 --> displaj last three parts of path: '.../subdir3/sundir2/subdir1'
 # export PROMPT_DIRTRIM=3
-export BASH_DIRTRIM=3
+export PROMPT_DIRTRIM=3
 
 date_stamp() {
 	echo -e "\e[38;5;244m[$(date +"%Y-%m-%d")] [$(date +%T)]\e[0m"
