@@ -25,7 +25,7 @@ alias lsd='lsd --color always --group-dirs first'
 alias ll='l -lgG --time-style=long-iso'
 alias la='ll -A'
 alias ld='lsd -l'
-alias cp='/usr/bin/cp -v'
+alias cp='/usr/bin/cp -vn'
 alias cpi='cp -i'
 alias mv='/usr/bin/mv -v'
 alias rm='/usr/bin/rm -v'
@@ -215,4 +215,7 @@ alias fzvmp='fzf -m | xargs -ro vim -p'
 # 20241015
 # alias sbrn='source ~/.bashrc_nerd'
 # alias sbrb='source ~/.bashrc_base'
+
+# 20250327
+alias prs='prompt_switch'
 
