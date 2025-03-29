@@ -90,12 +90,13 @@ oifs() {
 	echo -n "setting IFS to original value ..."
 	IFS=$' \t\n'
 	echo " done."
-	}
+}
 
 # show IFS value
 showifs() {
 	printf %q "$IFS"
-	}
+
+}
 
 # source /home/forallusers/xcol_bash.sh
 

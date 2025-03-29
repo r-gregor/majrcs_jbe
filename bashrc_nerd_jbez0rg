@@ -62,11 +62,6 @@ oifs() {
 	echo " done."
 	}
 
-# show IFS value
-showifs() {
-	printf %q "$IFS"
-	}
-
 # source /home/forallusers/xcol_bash.sh
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export JDK_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
