@@ -3,6 +3,36 @@
 
 unalias -a
 
+##########################
+### list/view commands ###
+##########################
+alias ls='\ls --group-directories-first'
+alias l='ls --color=always'
+alias ll='l -lgG --time-style=long-iso'
+alias LL='l -lgG --time-style=long-iso'
+alias la='ll -A'
+alias LA='ll -A'
+alias ld='l -l'
+alias LD='ld -l'
+alias cl='clear'
+alias CL='clear'
+alias cls='clear'
+alias CLS='clear'
+alias grepc='GREP_COLOR="1;31" LANG=C grep --color=always'
+alias hst='history'
+alias xx='logout'
+alias stt='stat -c "%A %a %n" '
+alias sbr='source ~/.bashrc'
+alias du1='du -h -d1 $PWD/* | sort -hr | less'
+alias tree='tree -C --noreport --charset ASCII --dirsfirst'
+alias show='find /usr/local/bin/* -type l | xargs ls --color'
+alias sdu='sudo du -sh --total * | sort -hr | head'
+alias lst='ls --color -t'
+alias lsth='ls --color -t | head -n10'
+alias llt='ls --color -lt'
+alias llth='ls --color -lt | head -n10'
+
+
 #####################################
 ### file/dir manipulations/access ###
 #####################################
