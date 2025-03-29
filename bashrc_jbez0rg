@@ -136,6 +136,7 @@ export JVLPP="${JGT}/vlpprs_jbe"
 export JPRNS="${JGT}/prenos"
 #
 export KNOWLEDGEDB="${JGT}/knowledgedb"
+export BRISI="${HOME}/majstaf/BRISI"
 #
 # 20250313
 export MTST="${MJSTF}/coding2/testing"
