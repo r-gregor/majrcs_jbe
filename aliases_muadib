@@ -1,0 +1,195 @@
+# last updated 20241225
+
+unalias -a
+
+##########################
+### list/view commands ###
+##########################
+alias ls='\ls --group-directories-first'
+alias l='ls --color=always'
+alias ll='l -lgG --time-style=long-iso'
+alias LL='l -lgG --time-style=long-iso'
+alias la='ll -A'
+alias LA='ll -A'
+alias ld='l -l'
+alias LD='ld -l'
+alias cl='clear'
+alias CL='clear'
+alias cls='clear'
+alias CLS='clear'
+alias grepc='GREP_COLOR="1;31" LANG=C grep --color=always'
+alias hst='history'
+alias xx='logout'
+alias stt='stat -c "%A %a %n" '
+alias sbr='source ~/.bashrc'
+alias du1='du -h -d1 $PWD/* | sort -hr | less'
+alias tree='tree -C --noreport --charset ASCII --dirsfirst'
+alias show='find /usr/local/bin/* -type l | xargs ls --color'
+alias sdu='sudo du -sh --total * | sort -hr | head'
+alias lst='ls --color -t'
+alias lsth='ls --color -t | head -n10'
+alias llt='ls --color -lt'
+alias llth='ls --color -lt | head -n10'
+
+#####################################
+### file/dir manipulations/access ###
+#####################################
+alias fm='thunar &'
+alias pm='pcmanfm &'
+alias opn='mousepad & 2>/dev/null'
+alias dcm='doublecmd &'
+alias wdf='watch -d -n1 df'
+alias wdfh='watch -d -n1 df -h'
+alias wdu='watch -d -n1 du -s ./*'
+alias dfl='df | /usr/bin/grep -v loop'
+alias dflh='df -h | /usr/bin/grep -v loop'
+alias wdfl='watch -d -n1 "df | /usr/bin/grep -v loop"'
+alias wdflh='watch -d -n1 "df -h | /usr/bin/grep -v loop"'
+# alias cp='/usr/bin/cp -v'
+alias cp='cp -nv'
+alias cpi='cp -i'
+alias mv='/usr/bin/mv -v'
+alias rm='/usr/bin/rm -v'
+alias sbr='source ~/.bashrc'
+alias sbrf='source ~/.bashrc_starship'
+alias SBR='source ~/.bashrc'
+alias dbs='dropbox status'
+alias DBS='dropbox status'
+
+
+#######################
+### custom commands ###
+#######################
+alias bat-stat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+alias bttr='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
+alias hstl='gPth="$HOME/majstaf/seznami/hstl_muadib_$(date +'%Y%m%d-%H%M%S').txt"; history >> ${gPth}; echo "[INFO] latest HISTORY added to ${gPth}!"'
+alias fd='/usr/bin/fdfind'
+alias pf='poweroff'
+alias rb='reboot'
+alias mountd='/usr/bin/mount | /usr/bin/grep "/dev/"'
+alias mnt='mount | \grep ^/dev'
+alias clm='column -c "$(tput cols)"'
+alias clmn='cat -n | column -c "$(tput cols)"'
+alias ctn='cat -n'
+alias ccat='highlight -O ansi'
+alias r='/usr/bin/ranger'
+alias prs='prompt_switch'
+
+###########################
+### yt-dlp / youtube-dl ###
+###########################
+ydl_cmd=/home/rgregor/.local/bin/yt-dlp
+alias ydlF='${ydl_cmd} -F '
+alias ydl="${ydl_cmd} -o '%(title)s_%(upload_date)s.%(ext)s'"
+alias ydla='${ydl_cmd} -x --audio-format mp3 '
+
+
+#########################
+### terminal settings ###
+#########################
+alias wrapoff='printf "\033[?7l"'
+alias wrapon='printf "\033[?7h"'
+alias showifs='printf %q "$IFS"'     # SHOW IFS
+
+
+######################
+### system aliases ###
+######################
+alias sau='sudo apt update'
+alias sag='sudo apt upgrade'
+alias sad='sudo apt-get dist-upgrade'
+alias w_s='watch -n1 sensors'
+alias umount='umount -v'
+alias un-mount_dev_sdds='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdd*'
+alias un-mount_dev_sdcs='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdc*'
+alias un-mount_dev_sdbs='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdb*'
+alias un-mount_dev_sdas='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sda*'
+alias rb='sudo reboot'
+alias pwf='systemctl poweroff -i'
+alias rbt='systemctl reboot -i'
+
+
+######################
+### screen aliases ###
+######################
+alias sl1='screen -X source ~/.screen-lyt-01' # 1-st H split, lower region V-split
+alias sl2='screen -X source ~/.screen-lyt-02' # 1-st V-split, right region H-split
+alias sl3='screen -X source ~/.screen-lyt-03' # 2x V-split, 2x H-split
+
+
+####################
+### tmux command ###
+####################
+# alias ktmx='tmux kill-server'
+# alias ktmux='tmux kill-server'
+# alias tmux='tmux -2'
+
+
+###################
+### vim command ###
+###################
+alias vvm='vim ~/.vimrc'
+alias vbr='vim ~/.bashrc'
+alias vimb='vim -u $HOME/.dotvimrc_monochrome'
+alias vimr='vim -M'
+alias vimm='vim -M'
+alias uim=' xargs -ro vim -p'
+alias uimp=' xargs -ro vim -Mp'
+
+
+#######################
+### custom commands ###
+#######################
+alias kodis='ssh root@192.168.64.32'
+alias crlw='curl wttr.in/Ljubljana'
+alias jvcd='for FFF in $(ls -1 *java); do javac -verbose $FFF && echo -e done "$FFF\n----------------------------"; done'
+alias cli='exo-open --launch TerminalEmulator'
+
+
+####################
+### java aliases ###
+####################
+alias jar='/usr/lib/jvm/java-11-openjdk-amd64/bin/jar'
+alias jrun='java -jar '
+
+
+##################
+### UNASSIGNED ###
+##################
+alias tpon="xinput set-prop 13 \"Device Enabled\" 1"
+alias tpof="xinput set-prop 13 \"Device Enabled\" 0"
+
+
+#######################
+### python commands ###
+#######################
+alias py='/usr/bin/python3'
+alias Idea='/home/rgregor/majstaf/majprogs/idea-IC-211.7142.45/bin/idea.sh &'
+alias python3='/usr/bin/python3'
+alias p3='/usr/bin/python3'
+alias bat='/usr/bin/batcat'
+
+
+####################
+### git commands ###
+####################
+export KDBWORKTREE="${HOME}/Dropbox/ODPRTO"
+export KDBGITDIR="${HOME}/majstaf/d_kdb/knowledgedb.git"
+alias dkdb="/usr/bin/git --git-dir=${KDBGITDIR} --work-tree=${KDBWORKTREE}"
+export MDBVOLGITDIR="${HOME}/majstaf/mdbgit/vlpprs_mdb"
+export MDBVOLWORKDIR="${HOME}/majstaf/majvolpejpers"
+alias mvol="/usr/bin/git --git-dir=${MDBVOLGITDIR} --work-tree=${MDBVOLWORKDIR}"
+alias gst='/usr/bin/git status'
+
+
+###################
+### fzf aliases ###
+###################
+alias sfvm='fzf --reverse | xargs -ro vim'
+alias sfevm='fzf --reverse -e | xargs -ro vim'
+alias sfvmr='fzf --reverse | xargs -ro vim -M'
+alias sfevmr='fzf --reverse -e | xargs -ro vim -M'
+alias mfvm='fzf -m --reverse | xargs -ro vim -p'
+alias mfevm='fzf -m --reverse -e | xargs -ro vim -p'
+alias run='ls ~/majstaf/majbin/ | fzf --reverse | bash - '
+
