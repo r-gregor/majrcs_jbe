@@ -1,0 +1,85 @@
+# =======
+# EXPORTs
+# =======
+
+export LESS="-QR -x4 -Xr"
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+export HISTFILESIZE=5000
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
+export HISTTIMEFORMAT='%F %T '
+
+export EDITOR=/usr/bin/vim
+export TERM=xterm-256color
+
+### changed 20160510
+# export PS1='$(printf "\n%s\n")\$> \u@\h [${PWD}] \n\$> '
+# export PS1='$(printf "\n%s\n")\$> \[\033[01;32m\]\u@\h \[\033[01;34m\][${PWD}]\[\033[00m\] \n\$> '
+# export PS1='$(printf "%s")\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\[\033[00m\]\n\$> '
+
+# source /home/rgregor/majstaf/majrcs/bashrc-prompt-nerd-jbez0rg
+source /home/rgregor/majstaf/majrcs/bashrc-prompt-bare-jbez0rg
+
+### TERMINAL & DISPLAY SETTINGS 20160514
+### terminal font settings: Ubuntu mono, 11;
+### transparent background (0,96); text selection color: #F20608; 
+### background color: #1A1717; text color: #CFC8C8
+
+
+unset TMP
+unset TEMP
+export TMP=/tmp
+export TEMP=/tmp
+
+# =========
+# VARIABLES
+# =========
+
+### eval "`dircolors -b ~/.dircolorsrc`"
+
+export djt=$(date +%Y%m%d)
+export djtt=$(date +%Y%m%d-%H%M%S)
+
+# ==================
+# backspace = delete
+# ==================
+
+if tty --quiet; then
+stty erase '^?'
+fi
+
+# set IFS to newline '\n'
+nifs() {
+	echo -n "setting IFS to newline ..."
+	IFS=$'\n'
+	echo " done."
+	}
+
+# set IFS to orginal ' \t\n'
+oifs() {
+	echo -n "setting IFS to original value ..."
+	IFS=$' \t\n'
+	echo " done."
+	}
+
+# source /home/forallusers/xcol_bash.sh
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export JDK_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export PATH_TO_FX="/usr/share/openjfx/lib"
+
+
+# sudo apt install fzf
+# Append this line to ~/.bashrc to enable fzf keybindings for Bash:
+source /usr/share/doc/fzf/examples/key-bindings.bash
+# Append this line to ~/.bashrc to enable fuzzy auto-completion for Bash:
+# ignore for fzf --version >= 0.29
+# source /usr/share/doc/fzf/examples/completion.bash
+# export CDPATH=".:$HOME/majstaf:$HOME/majstaf/coding2/testing:$HOME/Dropbox/ODPRTO"
+
+# 20231005
+source ${HOME}/.SCRTS
+
+# 20240828
+export PATH=${PATH}:${HOME}/majstaf/majprogs/go/bin
+export GOROOT=${HOME}/majstaf/majprogs/go
+
