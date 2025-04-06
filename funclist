@@ -57,11 +57,11 @@ lsl ()	{
 
 mmm () {
 clear
-source $HOME/.bashrc_monochrome
+source $HOME/.bashrc-monochrome
 echo "*************************"
 echo "* Use the source Luke!! *"
 echo "*************************"
-echo "The \"$HOME/.bashrc_monochrome\" has just been sourced!!"
+echo "The \"$HOME/.bashrc-monochrome\" has just been sourced!!"
 echo
 }
 
@@ -162,8 +162,8 @@ fi
 ### after installed sshfs ...
 
 
-# function pim_on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Movies
-pim_on() {
+# function pim-on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Movies
+pim-on() {
 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/Movies /home/rgregor/KRZ_Movies
 	if [ $? -eq 0 ]; then
 		echo "KODI sucessfully conected to /home/rgregor/KRZ_Movies"
@@ -173,8 +173,8 @@ pim_on() {
 }
 
 
-# function pim_of() -- kill sshfs /home/rgregor/KRZ_Movies
-pim_of() {
+# function pim-of() -- kill sshfs /home/rgregor/KRZ_Movies
+pim-of() {
 	fusermount -u /home/rgregor/KRZ_Movies
 	echo "/home/rgregor/KRZ_Movies disconected."
 }
@@ -184,8 +184,8 @@ pim_of() {
 #
 #
 
-# function pit_on() -- sshfs KODI:TV Shows to /home/rgregor/KRZ_TV_shows
-pit_on() {
+# function pit-on() -- sshfs KODI:TV Shows to /home/rgregor/KRZ_TV_shows
+pit-on() {
 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/TV\ Shows /home/rgregor/KRZ_TV_shows
 	if [ $? -eq 0 ]; then
 		echo "KODI sucessfully conected to /home/rgregor/KRZ_TV_shows"
@@ -195,16 +195,16 @@ pit_on() {
 }
 
 
-# function pit_of() -- kill sshfs /home/rgregor/KRZ_TV_shows
-pit_of() {
+# function pit-of() -- kill sshfs /home/rgregor/KRZ_TV_shows
+pit-of() {
 	fusermount -u /home/rgregor/KRZ_TV_shows
 	echo "/home/rgregor/KRZ_TV_shows disconected."
 }
 
 
 ################################################################################
-# function piv_on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Videos
-piv_on() {
+# function piv-on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Videos
+piv-on() {
 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/Videos /home/rgregor/KRZ_Videos
 	if [ $? -eq 0 ]; then
 		echo "KODI sucessfully conected to /home/rgregor/KRZ_Videos"
@@ -214,8 +214,8 @@ piv_on() {
 }
 
 
-# function piv_of() -- kill sshfs /home/rgregor/KRZ_Videos
-piv_of() {
+# function piv-of() -- kill sshfs /home/rgregor/KRZ_Videos
+piv-of() {
 	fusermount -u /home/rgregor/KRZ_Videos
 	echo "/home/rgregor/KRZ_Videos disconected."
 }
@@ -260,7 +260,7 @@ tmxdb () {
 }
 
 ### 20180302
-256_colors () {
+256-colors () {
 
     for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done
 }
@@ -281,20 +281,20 @@ cless() {
 	highlight -O  ansi $@ | less
 }
 
-### function BrthReminder_c() {
-### 	/home/rgregor/majstaf/majbin/BrthReminder_c/BrthReminder_c
+### function BrthReminder-c() {
+### 	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c
 ### }
 ### 
 ### function bb() {
-### 	/home/rgregor/majstaf/majbin/BrthReminder_c/BrthReminder_c
+### 	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c
 ### }
 ### 
-### function BrthReminder_c_color() {
-### 	/home/rgregor/majstaf/majbin/BrthReminder_c/BrthReminder_c_color
+### function BrthReminder-c-color() {
+### 	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c-color
 ### }
 ### 
 ### function bbc() {
-### 	/home/rgregor/majstaf/majbin/BrthReminder_c/BrthReminder_c_color
+### 	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c-color
 ### }
 
 ff() {
@@ -311,19 +311,19 @@ logout() {
 
 # 20241015
 sbrn() {
-	nohup alacritty -e bash --init-file ~/.bashrc_nerd >/dev/null 2>&1 &
+	nohup alacritty -e bash --init-file ~/.bashrc-nerd >/dev/null 2>&1 &
 }
 
 sbrb() {
-	nohup alacritty -e bash --init-file ~/.bashrc_base >/dev/null 2>&1 &
+	nohup alacritty -e bash --init-file ~/.bashrc-base >/dev/null 2>&1 &
 }
 
 gst() {
 	/usr/bin/git status
 }
 
-prompt_switch() {
-			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
+prompt-switch() {
+			prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | fzf --reverse)
 			if [ "$choice" == "quit" ]; then
@@ -334,8 +334,8 @@ prompt_switch() {
 }
 
 
-prompt_switch_dmn() {
-			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
+prompt-switch-dmn() {
+			prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | dmenu -l 5 -p "choose prompt:")
 			if [ "$choice" == "quit" ]; then
@@ -345,8 +345,8 @@ prompt_switch_dmn() {
 			fi
 }
 
-prompt_switch_rofi() {
-			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
+prompt-switch-rofi() {
+			prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | rofi -dmenu -no-fixed-num-lines)
 			if [ "$choice" == "quit" ]; then
@@ -357,19 +357,19 @@ prompt_switch_rofi() {
 }
 
 swpd() {
-	switch_prompt_dmn
+	switch-prompt-dmn
 }
 
 swpr() {
-	switch_prompt_rofi
+	switch-prompt-rofi
 }
 
-BrthReminder_c() {
-	~/.local/bin/BrthReminder_c
+BrthReminder-c() {
+	~/.local/bin/BrthReminder-c
 }
 
-BrthReminder_c_color() {
-	~/.local/bin/BrthReminder_c_color
+BrthReminder-c-color() {
+	~/.local/bin/BrthReminder-c-color
 }
 
 
