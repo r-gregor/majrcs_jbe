@@ -325,7 +325,7 @@ gst() {
 prompt-switch() {
 			prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
-			choice=$(echo -e "${prompts}\n${quit}" | fzf --reverse)
+			choice=$(echo -e "${prompts}\n${quit}" | fzf --reverse -e)
 			if [ "$choice" == "quit" ]; then
 				:
 			else
