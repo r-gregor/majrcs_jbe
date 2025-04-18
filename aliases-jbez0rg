@@ -122,19 +122,6 @@ alias ktmux='tmux kill-server'
 alias tmux='tmux -2'
 
 
-###################
-### vim command ###
-###################
-alias v="vim"
-alias vvm='vim ~/.vimrc'
-alias vbr='vim ~/.bashrc'
-alias vimb='vim -u $HOME/.dotvimrc-monochrome'
-alias vimr='vim -M'
-alias vimm='vim -M'
-alias uim=' xargs -ro vim -p'
-alias uimp=' xargs -ro vim -Mp'
-
-
 #######################
 ### custom commands ###
 #######################
@@ -175,19 +162,6 @@ export JBEVOLWORKTREE="${HOME}/majstaf/majvolpejpers"
 alias jvol="/usr/bin/git --git-dir=${JBEVOLGITDIR} --work-tree=${JBEVOLWORKTREE}"
 
 
-###################
-### fzf aliases ###
-###################
-alias sfvm='fzf --reverse | xargs -ro vim'
-alias sfevm='fzf --reverse -e | xargs -ro vim'
-alias sfvmr='fzf --reverse | xargs -ro vim -M'
-alias sfevmr='fzf --reverse -e | xargs -ro vim -M'
-alias mfvm='fzf -m --reverse | xargs -ro vim -p'
-alias mfevm='fzf -m --reverse -e | xargs -ro vim -p'
-# alias run='ls ~/majstaf/majbin/ | fzf --reverse | bash - '
-alias run='find ~/majstaf/majbin/ -type f -executable | fzf --reverse | bash - '
-
-
 #######################
 ### jbez0rg aliases ###
 #######################
@@ -205,4 +179,33 @@ alias llth='ls --color -lt | head -n10'
 alias sdu='sudo du -sh --total '*' | sort -hr | head'
 alias show='find /usr/local/bin -type l | xargs ls --color'
 alias tree='tree -C --noreport --charset ASCII --dirsfirst'
+
+
+###################
+### fzf aliases ###
+###################
+alias lss-fzf='less $(fzf --reverse)'
+alias vedit-sfjl-fzf='fzf --reverse | xargs -ro vim'
+alias vedit-sfjl-efzf='fzf --reverse -e | xargs -ro vim'
+alias vedit-mfjl-fzf='fzf -m --reverse | xargs -ro vim -p'
+alias vedit-mfjl-efzf='fzf -m --reverse -e | xargs -ro vim -p'
+alias vview-sfjl-fzf='fzf --reverse | xargs -ro vim -M'
+alias vview-sfjl-efzf='fzf --reverse -e | xargs -ro vim -M'
+alias vview-mfjl-fzf='fzf -m --reverse | xargs -ro vim -Mp'
+alias vview-mfjl-efzf='fzf -m --reverse -e | xargs -ro vim -Mp'
+alias run='find ~/majstaf/majbin/ -type f -executable | fzf --reverse | bash - '
+alias run-efzf='find ~/majstaf/majbin/ -type f -executable | fzf --reverse -e | bash - '
+
+
+###################
+### vim command ###
+###################
+alias v='vim'
+alias v-ro='vim -M'                                                         # readonly
+alias v-mfjl=' xargs -ro vim -p'                                            # open in separate tabs
+alias v-mfjl-ro=' xargs -ro vim -Mp'                                        # open in separate tabs redaonly
+alias v-sfjl-git-repo='find -type f | grep -v '.git' | fzf | xargs -ro vim' # fzf single search inside repo
+alias v-vrc='vim ~/.vimrc'
+alias v-brc='vim ~/.bashrc'
+alias vimn='vim -Nu NORC '
 
