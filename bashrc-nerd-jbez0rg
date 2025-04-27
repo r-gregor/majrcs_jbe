@@ -76,7 +76,8 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 # export CDPATH=".:$HOME/majstaf:$HOME/majstaf/coding2/testing:$HOME/Dropbox/ODPRTO"
 
 # 20231005
-source ${HOME}/.SCRTS
+source ${HOME}/.SCRTS_yh
+source ${HOME}/.SCRTS_gg
 
 # 20240828
 export PATH=${PATH}:${HOME}/majstaf/majprogs/go/bin
