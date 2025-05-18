@@ -378,7 +378,9 @@ ncd() {
 }
 
 
-check-all-git-diffs() {
-	for DDD in majbin majrcs metsys; do check-git-diffs-jbe $DDD; done
-}
+# 20250518
+# moved to script in majbin
+# check-all-git-diffs() {
+# 	for DDD in majbin majrcs metsys; do check-git-diffs-jbe $DDD; done
+# }
 
