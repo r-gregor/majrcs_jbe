@@ -151,5 +151,5 @@ export MVS="${MJMDJ}/Movies"
 export MBN="${MJSTF}/majbin"
 export MRCS="${MJSTF}/majrcs"
 export SZNM="${MJSTF}/seznami"
-export MTSS="${MJSTF}metsys"
+export MTSS="${MJSTF}/metsys"
 
