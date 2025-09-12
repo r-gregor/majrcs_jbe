@@ -26,7 +26,7 @@ alias sbr='source ~/.bashrc'
 alias du1='du -h -d1 $PWD/* | sort -hr | less'
 alias tree='tree -C --noreport --charset ASCII --dirsfirst'
 alias lst='ls --color -t'
-alias lsth='ls --color -t | head -n10'
+# alias lsth='ls --color -t | head -n10'
 alias llt='ls --color -lt'
 alias llth='ls --color -lt | head -n10'
 
