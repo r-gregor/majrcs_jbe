@@ -356,22 +356,14 @@ prompt-switch-rofi() {
 			fi
 }
 
-swpd() {
+psdm() {
 	prompt-switch-dmn
 }
 
-swpr() {
+psrf() {
 	prompt-switch-rofi
 }
 
-
-prsb() {
-	source ~/majstaf/majrcs/bashrc-prompt-bare-jbez0rg
-}
-
-prsn() {
-	source ~/majstaf/majrcs/bashrc-prompt-nerd-jbez0rg
-}
 
 psb() {
 	source ~/majstaf/majrcs/bashrc-prompt-bare-jbez0rg
@@ -380,7 +372,6 @@ psb() {
 psn() {
 	source ~/majstaf/majrcs/bashrc-prompt-nerd-jbez0rg
 }
-
 
 BrthReminder-c() {
 	~/.local/bin/BrthReminder-c
