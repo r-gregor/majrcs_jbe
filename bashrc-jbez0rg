@@ -142,8 +142,8 @@ export NTST="${MTST}/ncurses_testing"
 export ZTST="${MTST}/zig_testing"
 # ------------------------------------
 export MJMD="${MJST}/majmedia"
-export SVM="${MJMDJ}/Seivom"
-export MVS="${MJMDJ}/Movies"
+export SVM="${MJMD}/Seivom"
+export MVS="${MJMD}/Movies"
 # ------------------------------------
 export MJBN="${MJST}/majbin"
 export MTSYS="${MJST}/metsys"
