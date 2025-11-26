@@ -119,10 +119,13 @@ export PATH=${PATH}:${HOME}/majstaf/majprogs/go/bin
 export GOROOT=${HOME}/majstaf/majprogs/go
 
 # new exports 20251126
-export MJST="${HOME}/majstaf"
-export JGT="${MJST}/jbegit"
-export BRISI="${MJST}/BRISI"
-export DANES="${MJST}/_NERAZPOREJENO/__DANES__"
+export MJSTF="${HOME}/majstaf"
+export JGT="${MJSTF}/jbegit"
+export MTST="${MJSTF}/coding2/testing"
+export MJMD="${MJSTF}/majmedia"
+# ------------------------------------
+export BRISI="${MJSTF}/BRISI"
+export DANES="${MJSTF}/_NERAZPOREJENO/__DANES__"
 # ------------------------------------
 export KNOWLEDGEDB="${JGT}/knowledgedb"
 export JGMJBN="${JGT}/majbin_jbe"
@@ -132,7 +135,6 @@ export JGSZNM="${JGT}/seznami_jbe"
 export JGPRNS="${JGT}/prenos"
 export JGDTFJLS="${JGT}/dotfiles_jbe"
 # ------------------------------------
-export MTST="${MJST}/coding2/testing"
 export CTST="${MTST}/c_testing"
 export JTST="${MTST}/java_testing"
 export GTST="${MTST}/go_testing"
@@ -141,16 +143,16 @@ export RTST="${MTST}/rust_testing"
 export NTST="${MTST}/ncurses_testing"
 export ZTST="${MTST}/zig_testing"
 # ------------------------------------
-export MJMD="${MJST}/majmedia"
 export SVM="${MJMD}/Seivom"
 export MVS="${MJMD}/Movies"
 # ------------------------------------
-export MJBN="${MJST}/majbin"
-export MTSYS="${MJST}/metsys"
-export MRCS="${MJST}/majrcs"
-export SZNM="${MJST}/seznami"
-export MSCRP="${MJST}/majscripts-jbe"
-export MSPPT="${MJST}/support"
-export MCFG="${MJST}/majconfig"
-export MPRG="${MJST}/majprogs"
+export MJBN="${MJSTF}/majbin"
+export MTSYS="${MJSTF}/metsys"
+export MRCS="${MJSTF}/majrcs"
+export SZNM="${MJSTF}/seznami"
+export MSCRP="${MJSTF}/majscripts-jbe"
+export MSPPT="${MJSTF}/support"
+export MCFG="${MJSTF}/majconfig"
+export MPRG="${MJSTF}/majprogs"
+# ------------------------------------
 
