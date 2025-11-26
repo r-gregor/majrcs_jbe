@@ -118,39 +118,38 @@ source ${HOME}/.SCRTS_gg
 export PATH=${PATH}:${HOME}/majstaf/majprogs/go/bin
 export GOROOT=${HOME}/majstaf/majprogs/go
 
-# new exports 20251126
-export MJST="${HOME}/majstaf"
-export JGT="${MJST}/jbegit"
-export BRISI="${MJST}/BRISI"
-export DANES="${MJST}/_NERAZPOREJENO/__DANES__"
-# ------------------------------------
+# 20250221 new env variables
+export MJSTF="/home/rgregor/majstaf"
+export JGT="${MJSTF}/jbegit"
+export DANES="${MJSTF}/_NERAZPOREJENO/__DANES__"
+#
+export JMBN="${JGT}/majbin_jbe"
+export JMRC="${JGT}/majrcs_jbe"
+export JMTS="${JGT}/metsys_jbe"
+export JDTF="${JGT}/dotfiles_jbe"
+export JSZNM="${JGT}/seznami_jbe"
+export JVLPP="${JGT}/vlpprs_jbe"
+export JPRNS="${JGT}/prenos"
+#
 export KNOWLEDGEDB="${JGT}/knowledgedb"
-export JGMJBN="${JGT}/majbin_jbe"
-export JGMRCS="${JGT}/majrcs_jbe"
-export JGMTSYS="${JGT}/metsys_jbe"
-export JGSZNM="${JGT}/seznami_jbe"
-export JGPRNS="${JGT}/prenos"
-export JGDTFJLS="${JGT}/dotfiles_jbe"
-# ------------------------------------
-export MTST="${MJST}/coding2/testing"
-export CTST="${MTST}/c_testing"
-export JTST="${MTST}/java_testing"
-export GTST="${MTST}/go_testing"
-export PTST="${MTST}/python_testing"
-export RTST="${MTST}/rust_testing"
-export NTST="${MTST}/ncurses_testing"
-export ZTST="${MTST}/zig_testing"
-# ------------------------------------
-export MJMD="${MJST}/majmedia"
+export BRISI="${HOME}/majstaf/BRISI"
+#
+# 20250313
+export MTST="${MJSTF}/coding2/testing"
+export CTST="${MTST}/c-testing"
+export JTST="${MTST}/java-testing"
+export GTST="${MTST}/go-testing"
+export PTST="${MTST}/python-testing"
+export RTST="${MTST}/rust-testing"
+export NTST="${MTST}/ncurses-testing"
+export ZTST="${MTST}/zig-testing"
+
+export MJMDJ="${MJSTF}/majmedia"
 export SVM="${MJMDJ}/Seivom"
 export MVS="${MJMDJ}/Movies"
-# ------------------------------------
-export MJBN="${MJST}/majbin"
-export MTSYS="${MJST}/metsys"
-export MRCS="${MJST}/majrcs"
-export SZNM="${MJST}/seznami"
-export MSCRP="${MJST}/majscripts-jbe"
-export MSPPT="${MJST}/support"
-export MCFG="${MJST}/majconfig"
-export MPRG="${MJST}/majprogs"
+
+export MBN="${MJSTF}/majbin"
+export MRCS="${MJSTF}/majrcs"
+export SZNM="${MJSTF}/seznami"
+export MTSS="${MJSTF}/metsys"
 
