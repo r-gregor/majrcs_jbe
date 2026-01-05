@@ -390,6 +390,7 @@ ncd() {
 	fi
 
 	cd $(find "${DEST}" -type d \( -not -name ".git" -o -not -name ".cache" \) | fzf -e)
+}
 
 
 # 20250518
