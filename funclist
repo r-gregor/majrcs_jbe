@@ -383,8 +383,13 @@ BrthReminder-c-color() {
 
 
 ncd() {
-		 cd "$(find "$@" -type d \( -name ".git" -o -name ".cache" \) -prune -o -name "*" 2>/dev/null |fzf -e --reverse)"
-}
+	if [ $# -eq 1 ]; then
+		DEST="$1"
+	else
+		DEST="."
+	fi
+
+	cd $(find "${DEST}" -type d \( -not -name ".git" -o -not -name ".cache" \) | fzf -e)
 
 
 # 20250518
