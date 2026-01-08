@@ -169,7 +169,7 @@ alias jvol="/usr/bin/git --git-dir=${JBEVOLGITDIR} --work-tree=${JBEVOLWORKTREE}
 alias hstl='gPth="$HOME/majstaf/seznami/hstl_jbez0rg_$(date +'%Y%m%d-%H%M%S').txt"; history >> ${gPth}; echo "Successfuly added HISTORY to ${gPth}!"'
 alias du1='du -h -d1 $PWD/* | sort -hr | less'
 alias bb='~/majstaf/majbin/BrthReminder-c/BrthReminder-c'
-alias bbc='~/majstaf/majbin/BrthReminder-c/BrthReminder-c-color'
+alias bbc='~/majstaf/majbin/BrthReminder-c/BrthReminder-c-colors'
 alias cargon='cargo new --vcs=none '
 alias ccat='highlight -O ansi'
 alias ff='/usr/bin/firefox'
