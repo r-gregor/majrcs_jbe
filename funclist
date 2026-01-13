@@ -389,7 +389,7 @@ ncd() {
 		DEST="."
 	fi
 
-	cd $(find "${DEST}" -type d \( -not -name ".git" -o -not -name ".cache" \) | fzf -e)
+	cd $(find "${DEST}" -type d \( -not -name "\.git" -a -not -name "\.cache" \) | fzf -e --reverse)
 }
 
 
