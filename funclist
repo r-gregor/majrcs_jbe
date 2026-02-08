@@ -399,3 +399,15 @@ ncd() {
 # 	for DDD in majbin majrcs metsys; do check-git-diffs-jbe $DDD; done
 # }
 
+# 20260208
+reload_picom() {
+	if [ "$(pgrep picom)" == "" ]; then
+		printf "[INFO] picom not running -- reloading ...\n"
+		picom --config ~/.config/picom/picom.conf -b
+	else
+		printf "[INFO] picom already running\n"
+	fi
+}
+
+#
+
