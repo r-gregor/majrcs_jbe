@@ -30,7 +30,7 @@ parse_git_branch() {
 # # check: symbols and prompts_20240214.txt in ~/majstaf_en/metsys_en/
 # export PS1=$'\n\[\e[01;38;5;75m\][\h] \w\n$(parse_git_branch)\[\e[1;31m\]\u21AA \[\e[0m\] '
 prompt() {
-	 PS1=$'\n\[\e[01;38;5;75m\][\h] \w\n$(parse_git_branch)\[\e[1;31m\]\u21AA \[\e[0m\] '
+	 PS1=$'\[\e[01;38;5;75m\][\h] \w\n$(parse_git_branch)\[\e[1;31m\]\u21AA \[\e[0m\] '
 }
 
 PROMPT_COMMAND=prompt
