@@ -103,7 +103,7 @@ alias un-mount-dev-sdcs='echo "syncing ..." && sudo sync && echo "UN-mounting ..
 alias un-mount-dev-sdbs='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdb*'
 alias un-mount-dev-sdas='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sda*'
 alias rb='sudo reboot'
-alias pwf='systemctl poweroff -i'
+# alias pwf='systemctl poweroff -i'
 alias rbt='systemctl reboot -i'
 
 
