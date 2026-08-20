@@ -128,6 +128,7 @@ export BRISI="${MJSTF}/BRISI"
 export DANES="${MJSTF}/_NERAZPOREJENO/__DANES__"
 # ------------------------------------
 export MJBN="${MJSTF}/majbin"
+export MJDT="${MJSTF}/majdata"
 export MTSYS="${MJSTF}/metsys"
 export MRCS="${MJSTF}/majrcs"
 export SZNM="${MJSTF}/seznami"
