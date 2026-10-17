@@ -100,10 +100,10 @@ upup() {
 	done
 }
 
-# sbr() {
-# # descpt: clear and source '.bashrc'
-# 	clear && source ~/.bashrc
-# }
+sbr() {
+# descpt: clear and source 'dot_bashrc'
+	clear && source ~/.bashrc
+}
 
 zdaj() {
 # descpt: displays various date & time formated info
@@ -308,6 +308,11 @@ ncd() {
 	fi
 
 	cd $(find "${DEST}" -type d \( -not -name ".git" -o -not -name ".cache" \) | fzf -e)
+}
+
+gst() {
+# descpt: git status
+	git status
 }
 
 vimb() {
