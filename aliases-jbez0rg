@@ -159,7 +159,7 @@ alias bat='/usr/bin/batcat'
 ####################
 ### git commands ###
 ####################
-export JBEVOLGITDIR="${HOME}/majstaf/jbegit/vlpprs_jbe"
+export JBEVOLGITDIR="${HOME}/majstaf/jbegit/vlpprs_jbe.git"
 export JBEVOLWORKTREE="${HOME}/majstaf/majvolpejpers"
 alias jvol="/usr/bin/git --git-dir=${JBEVOLGITDIR} --work-tree=${JBEVOLWORKTREE}"
 alias gtpl='git pull'
