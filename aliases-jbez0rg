@@ -32,6 +32,14 @@ alias llt='ls --color -lt'
 alias llth='ls --color -lt | head -n10'
 alias hl='rg --passthru' # highlight
 
+###################
+### lsd aliases ###
+###################
+alias L='lsd'
+alias LL='L -lgG --time-style=long-iso'
+alias LA='LL -A'
+alias LD='lsd -l'
+
 #####################################
 ### file/dir manipulations/access ###
 #####################################
