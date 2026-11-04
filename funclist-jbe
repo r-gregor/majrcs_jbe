@@ -480,6 +480,8 @@ gtrmsv() {
 
 yrm() {
 	# descpt: yes | remove ... for any directory containing .git
+	printf "[!] about to remove: '%s'\n" "$@"
+	read -r -p "[?] continue?"
 	yes | rm -rv "$@"
 }
 
