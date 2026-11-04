@@ -477,3 +477,9 @@ gtrmsv() {
 # descpt: show remotes in current git repository
 	git remote -v
 }
+
+yrm() {
+	# descpt: yes | remove ... for any directory containing .git
+	yes | rm -rv "$@"
+}
+
