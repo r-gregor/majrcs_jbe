@@ -271,22 +271,22 @@ prsr() {
 
 psb() {
 # descpt: source 'bare' prompt
-	source ~/majstaf/majrcs/bashrc-prompt-bare-muadib
+	source ~/majstaf/majrcs/bashrc-prompt-bare-jbez0rg
 }
 
 prsb() {
 # descpt: source 'bare' prompt
-	source ~/majstaf/majrcs/bashrc-prompt-bare-muadib
+	source ~/majstaf/majrcs/bashrc-prompt-bare-jbez0rg
 }
 
 psn() {
 # descpt: source 'nerd' prompt
-	source ~/majstaf/majrcs/bashrc-prompt-nerd-muadib
+	source ~/majstaf/majrcs/bashrc-prompt-nerd-jbez0rg
 }
 
 prsn() {
 # descpt: source 'nerd' prompt
-	source ~/majstaf/majrcs/bashrc-prompt-nerd-muadib
+	source ~/majstaf/majrcs/bashrc-prompt-nerd-jbez0rg
 }
 
 nifs() {
